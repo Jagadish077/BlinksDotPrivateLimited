@@ -1,0 +1,89 @@
+<div class="container">
+    <header>
+        <div class="nav-brand">
+            <p>#Covid Data Tracker</p>
+        </div>
+        <div class="bar">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-bar">
+
+            <div class="nav-link">
+                <a href="#">#TotalDeaths</a>
+                <span class="deaths">{{deaths}}</span>
+            </div>
+
+            <div class="nav-link">
+                <a href="#">#Active</a>
+                <span class="active">{{active_cases}}</span>
+            </div>
+            <div class="nav-link">
+                <a href="#">#confirmed</a>
+                <span class="confirmed">{{confirmed}}</span>
+            </div>
+            <div class="nav-link">
+                <a href="#">#recovered</a>
+                <span class="recovered">{{recovered}}</span>
+            </div>
+        </nav>
+    </header>
+    <div class="colors">
+        <div class="tag-container p1">
+           <p>#deaths </p> 
+        </div>
+        <div class="tag-container p2">
+           <p>#Active </p> 
+        </div>
+        <div class="tag-container p3">
+           <p>#confirmed </p> 
+        </div>
+        <div class="tag-container p4">
+           <p>#recovered </p> 
+        </div>
+    </div>
+    <div class="chart">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+<div class="state-wise-listing">
+    <table class="state-list" border="1px">
+        <thead class="table-header">
+            <tr>
+                <th>State Name</th>
+           
+                <th>Active Cases</th>
+            <th>confirmed</th>
+                <th>Total Deaths</th>
+             
+                <th>Recovered</th>
+            </tr>
+            {{#each totalData}}
+            <tr>
+                <td>{{stateName}}</td>
+                <td>{{active}}</td>
+                <td>{{confirmed}}</td>
+                <td>{{deaths}}</td>
+                <td>{{recovered}}</td>
+
+            </tr>
+            {{/each}}
+        </thead>
+    </table>
+</div>
+    <div class="footer">
+        <div class="footer-content">
+            <p>Follow Us on Social Media</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/theblinksdot.lmt.9"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/blinksdot/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/blinksdot"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+
+            </div>
+            <div class="footer-items">
+                <p>Developed and Designed by <span class="color">BlinksDot</span></p>
+                <p class="pfoot">Team : <span class="jagadish">Jagadish</span> <span class="manoj">Manoj</span> <span class="darshan">Darshan</span></p>
+            </div>
+        </div>
+        
+    </div>
+</div>
