@@ -27,13 +27,13 @@ var https_options = {
     p7b: fs.readFileSync("./sll/www_blinksdot_com.p7b")
    };
 
-   const hostname = 'www.blinksdot.com';
-   app.use((req, res, next) => {
-       if(req.protocol === 'http'){
-           res.redirect(301, `https://${hostname}${req.headers.host}`);
-       }
-       next();
-   })
+//    const hostname = 'www.blinksdot.com';
+//    app.use((req, res, next) => {
+//        if(req.protocol === 'http'){
+//            res.redirect(301, `https://${hostname}${req.headers.host}`);
+//        }
+//        next();
+//    })
 
 app.use('/', covidData)
 
