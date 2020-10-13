@@ -28,6 +28,7 @@ var https_options = {
     p7b: fs.readFileSync("./sll/www_blinksdot_com.p7b")
    };
 
+const hostName = 'https://www.blinksdot.com' || 'http://www.blinksdot.com' 
 
 app.use((req, res, next) => {
     if(req.headers.host === 'blinksdot.com') {
@@ -36,8 +37,8 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/', covidData)
-app.use('/', Home)
+app.use(`/${hostName}`, covidData)
+app.use(`/${hostName}`, Home)
 
 const serverHttpsPort = 443
 const serverHttpPort = 80
