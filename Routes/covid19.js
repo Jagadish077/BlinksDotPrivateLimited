@@ -40,7 +40,7 @@ app.get('/CovidDataTracker', async(req, response) => {
             "recovered": element.recovered,
         })
     });
-    response.render('CovidData',
+    response.render('covidData.hbs',
         { 
          active_cases: modifiedData[0].active,
          confirmed: modifiedData[0].confirmed ,

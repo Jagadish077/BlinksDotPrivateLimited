@@ -4,7 +4,7 @@ const app = express.Router()
 
 
 app.get('/', (req, res) => {
-    res.render('Home', {layout: "MainHome"})
+    res.render('home.hbs', {layout: "mainHome.hbs"})
 })
 
 module.exports = app;
