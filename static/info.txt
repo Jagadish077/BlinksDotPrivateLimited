@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: quenda-medium
+font link: https://www.fontspring.com/fonts/marc-lohner/quenda/quenda-medium
+font author: Marc Lohner
+font author site: http://marc-lohner.com/
+Slogan Font: quenda-medium
+
+icon designer: Muhamad Ulum
+icon designer link: /oelhoem
+        
+{"bg":"#FEF2E5","font":"#361C00","icon-gradient-0":"#EB4C00","icon-gradient-1":"#F2A900","slogan":"#4a3014"}
+      

@@ -51,8 +51,8 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-transition: visibility 0.1s, 0.4s ease;
-  transition: visibility 0.1s, 0.4s ease;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
 }
 
 .nav-link {
@@ -73,8 +73,8 @@ header {
 }
 
 .nav-link a {
-  -webkit-transition: visibility 0.1s, 0.4s ease;
-  transition: visibility 0.1s, 0.4s ease;
+  -webkit-transition: all 2s;
+  transition: all 2s;
   background-color: #dfedc7;
   padding: 5px;
 }
@@ -289,6 +289,10 @@ tr:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .nav-link a {
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
+  }
   .nav-bar,
   header {
     width: 100vw;
@@ -296,13 +300,15 @@ tr:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
   }
   .nav-bar {
     display: none;
   }
   .content {
-    -webkit-animation-name: fade-in 1s;
-            animation-name: fade-in 1s;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -316,13 +322,17 @@ tr:hover {
   .content .nav-link {
     width: auto;
     height: auto;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
   }
   .bar {
     -ms-flex-item-align: end;
         align-self: flex-end;
     display: initial;
     position: absolute;
-    margin: 10px 10px;
+    margin: 8px 10px;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
   }
   table {
     width: 100vw;

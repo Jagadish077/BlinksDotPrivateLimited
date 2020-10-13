@@ -33,7 +33,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    transition: visibility 0.1s, 0.4s ease;
+    transition: all 2s linear;
 }
 
 .nav-link {
@@ -47,7 +47,7 @@ header {
 }
 
 .nav-link a {
-    transition: visibility 0.1s, 0.4s ease;
+    transition: all 2s;
     background-color: rgb(223, 237, 199);
     padding: 5px;
 }
@@ -206,24 +206,28 @@ tr:hover{
 }
 
 .color:hover {
-    
     background-color: dodgerblue;
     font-weight: 900;
     border-radius: 5px;
     cursor: pointer;
 }
 @media only screen and (max-width: 768px) {
+    .nav-link  a{
+        transition: all 2s linear;
+    }
     .nav-bar,
     header {
         width: 100vw;
         flex-direction: column;
+        transition: all 2s linear;
+        
     }
     .nav-bar {
         display: none;
+        
     }
     .content {
-        // transition: visibility 0.1s, 0.4s ease;
-        animation-name: fade-in 1s;
+        transition: all 2s linear;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -231,13 +235,16 @@ tr:hover{
         .nav-link {
             width: auto;
             height: auto;
+            transition: all 2s linear;
         }
     }
     .bar {
         align-self: flex-end;
         display: initial;
         position: absolute;
-        margin: 10px 10px;
+        margin: 8px 10px;
+        transition: all 2s linear;
+
     }
     table {
         width: 100vw;

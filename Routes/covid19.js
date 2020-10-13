@@ -28,7 +28,7 @@ const main2 = async() => {
 }
 
 
-app.get('/', async(req, response) => {
+app.get('/CovidDataTracker', async(req, response) => {
     const data = await main2();
     let modifiedData = [];
     data.forEach(element => {
@@ -40,7 +40,7 @@ app.get('/', async(req, response) => {
             "recovered": element.recovered,
         })
     });
-    response.render('home',
+    response.render('CovidData',
         { 
          active_cases: modifiedData[0].active,
          confirmed: modifiedData[0].confirmed ,

@@ -9,6 +9,7 @@ const app = express()
 
 // Imports
 const covidData = require('./Routes/covid19')
+const Home = require('./Routes/Home')
 
 app.set('view engine', 'hbs');
 
@@ -28,9 +29,16 @@ var https_options = {
    };
 
 
+app.use((req, res, next) => {
+    if(req.headers.host === 'blinksdot.com') {
+        res.redirect(`https://www.blinksdot.com/`)
+    }
+    next()
+})
+
 app.use('/', covidData)
+app.use('/', Home)
 
-
-http.createServer(app).listen(80, ()=> console.log("server is insecure"))
-https.createServer(https_options, app).listen(443, () => console.log("server is secure"))
+http.createServer(app).listen(8080, ()=> console.log("server is insecure"))
+https.createServer(https_options, app).listen(5000, () => console.log("server is secure"))
 
