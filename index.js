@@ -37,8 +37,8 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use(`/${hostName}`, covidData)
-app.use(`/${hostName}`, Home)
+app.use(`/`, covidData)
+app.use(`/`, Home)
 
 const serverHttpsPort = 443
 const serverHttpPort = 80
