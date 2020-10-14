@@ -330,7 +330,7 @@ tr:hover {
         align-self: flex-end;
     display: initial;
     position: absolute;
-    margin: 8px 10px;
+    margin: 8px 10px 10px 0;
     -webkit-transition: all 2s linear;
     transition: all 2s linear;
   }

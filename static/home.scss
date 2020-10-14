@@ -23,7 +23,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 20px 10px;
     box-shadow: -1px -2px 14px 0px rgba(0,0,0,0.5);
     
 }
@@ -126,27 +126,27 @@ body {
 }
 
 .services-card {
-    border: 1px solid gray;
+    
     margin: 10px;
-    background-color: #0e131a;
+    background-color: #1a1f27;
     box-shadow: -1px -2px 14px 0px rgba(0,0,0,0.5);
     border-radius: 5px;
     height: auto;
     display: flex;
     justify-content: center;
     text-align: center;
+    padding: 20px;
     flex-direction: column;
 }
 .services-card-head {
     display: flex;
     flex-direction: row;
     padding: 5px;
-    background-color: gray;
     justify-content: center;
     align-items: center;
 }
 .services-card-body{
-    font-size: medium;
+    font-size: 12px;
     text-align: center;
 }
 //footer
