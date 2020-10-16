@@ -31,16 +31,9 @@ var https_options = {
 
 app.use(`/`, covidData)
 app.use(`/`, Home)
-
-app.use((req, res, next) => {
-    if(`http://${req.headers.host}`){
-        res.redirect(`https://${req.headers.host}${req.url}`)
-    }
-    next()
-})
 const serverHttpsPort = 443
 const serverHttpPort = 80
-// const port = 80 || process.env.PORT
+
 http.createServer(app).listen(serverHttpPort, () => console.log("redirect"))
 https.createServer(https_options, app).listen(serverHttpsPort, () => console.log("server is secure"))
 
