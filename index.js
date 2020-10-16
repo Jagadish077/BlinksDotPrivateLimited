@@ -28,11 +28,19 @@ var https_options = {
     p7b: fs.readFileSync("./sll/www_blinksdot_com.p7b")
    };
 
+
 app.use(`/`, covidData)
 app.use(`/`, Home)
 
 const serverHttpsPort = 443
 const serverHttpPort = 80
-http.createServer(app).listen(serverHttpPort, ()=> console.log("server is insecure"))
+
+console.log(app.address().port)
+const port = 80 || process.env.PORT
+http.createServer(app).listen(serverHttpPort, (req, res)=> {
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    console.log("redirected")
+    res.end();
+})
 https.createServer(https_options, app).listen(serverHttpsPort, () => console.log("server is secure"))
 
