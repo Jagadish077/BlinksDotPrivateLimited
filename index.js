@@ -33,6 +33,6 @@ app.use(`/`, Home)
 
 const serverHttpsPort = 443
 const serverHttpPort = 80
-http.createServer(app).listen(5000, ()=> console.log("server is insecure"))
-https.createServer(https_options, app).listen(8080, () => console.log("server is secure"))
+http.createServer(app).listen(serverHttpPort, ()=> console.log("server is insecure"))
+https.createServer(https_options, app).listen(serverHttpsPort, () => console.log("server is secure"))
 
