@@ -34,9 +34,7 @@ app.use(`/`, Home)
 
 const serverHttpsPort = 443
 const serverHttpPort = 80
-
-console.log(app.address().port)
-const port = 80 || process.env.PORT
+// const port = 80 || process.env.PORT
 http.createServer(app).listen(serverHttpPort, (req, res)=> {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     console.log("redirected")
