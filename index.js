@@ -35,10 +35,10 @@ app.use(`/`, Home)
 const serverHttpsPort = 443
 const serverHttpPort = 80
 // const port = 80 || process.env.PORT
-http.createServer(app).listen(serverHttpPort, (req, res)=> {
+http.createServer(app, (req, res)=> {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     console.log("redirected")
     res.end();
-})
+}).listen(serverHttpPort, () => console.log("redirect"))
 https.createServer(https_options, app).listen(serverHttpsPort, () => console.log("server is secure"))
 
