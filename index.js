@@ -28,15 +28,6 @@ var https_options = {
     p7b: fs.readFileSync("./sll/www_blinksdot_com.p7b")
    };
 
-const hostName = 'https://www.blinksdot.com' 
-
-app.use((req, res, next) => {
-    if(req.headers.host === 'blinksdot.com') {
-        res.redirect(`https://www.blinksdot.com/`)
-    }
-    next()
-})
-
 app.use(`/`, covidData)
 app.use(`/`, Home)
 
