@@ -172,10 +172,10 @@ body {
 }
 //footer
 .home-main-footer {
-    color: rgb(78, 78, 129);
+    color: rgb(55, 55, 61);
     width: 100%;
     height: auto;
-    background-color: rgb(17, 29, 37);
+    background-color: rgb(10, 19, 26);
     display: flex;
     flex-wrap: wrap;
     line-height: 30px;
@@ -209,16 +209,20 @@ body {
     text-align: center;
     align-items: center;
     margin: 5px;
-    padding: 10px;
+    padding: 5px;
     background-color: rgba(34, 34, 34, 0.925);
     border-radius: 4px;
   
 }
 .social-icons-items:hover {
-    background-color: rgb(170, 170, 170);
+    border: black;
+    background-color: rgb(255, 255, 255);
 }
 .social-icons-items a {
     color: white;
+}
+.social-icons-items a:hover{
+    color: black;
 }
 .copy-rights {
     border-top: 1px solid gray;

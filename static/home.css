@@ -244,10 +244,10 @@ body {
 }
 
 .home-main-footer {
-  color: #4e4e81;
+  color: #37373d;
   width: 100%;
   height: auto;
-  background-color: #111d25;
+  background-color: #0a131a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,17 +303,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 5px;
-  padding: 10px;
+  padding: 5px;
   background-color: rgba(34, 34, 34, 0.925);
   border-radius: 4px;
 }
 
 .social-icons-items:hover {
-  background-color: #aaaaaa;
+  border: black;
+  background-color: white;
 }
 
 .social-icons-items a {
   color: white;
+}
+
+.social-icons-items a:hover {
+  color: black;
 }
 
 .copy-rights {

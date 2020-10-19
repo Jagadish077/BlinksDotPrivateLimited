@@ -11,7 +11,7 @@ a {
 }
 
 body {
-  background: #93aaaa;
+  background: #1F2833;
 }
 
 header {
@@ -157,6 +157,7 @@ header {
 }
 
 table {
+  color: whitesmoke;
   border-collapse: collapse;
   width: 100vw;
 }
@@ -172,11 +173,11 @@ th, td {
 }
 
 th {
-  background-color: #d6cdc7;
+  background-color: #223349;
 }
 
 tr:hover {
-  background-color: seashell;
+  background-color: #0b0c24;
 }
 
 .footer {
@@ -251,27 +252,6 @@ tr:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.jagadish {
-  padding: 5px;
-  background-color: #c2c7ba;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
-.manoj {
-  padding: 5px;
-  background-color: #c2c7ba;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
-.darshan {
-  padding: 5px;
-  background-color: #c2c7ba;
-  border-radius: 5px;
-  font-weight: 500;
 }
 
 .color {
