@@ -10,14 +10,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/contactus', (req, res) => {
-    res.render('contactus', {layout: "mainHome.hbs", title: 'form validation', succes: false, errors: req.session.errors})
+    res.render('contactus.hbs', {layout: "mainHome.hbs"})
 })
 app.post('/contactus',[validateUser], async(req, res) => {
     const errors = validationResult(req);
         if (!errors.isEmpty()){
             console.log(errors)
             console.log(req.headers);
-           res.render('contactus', {layout: "mainHome.hbs"})
+           res.render('contactus.hbs', {layout: "mainHome.hbs"})
         }
         const userDatas = {
             FirstName: req.body.firstname,
