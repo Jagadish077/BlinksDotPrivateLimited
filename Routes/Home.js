@@ -15,9 +15,7 @@ app.get('/contactus', (req, res) => {
 app.post('/contactus',[validateUser], async(req, res) => {
     const errors = validationResult(req);
         if (!errors.isEmpty()){
-            console.log(errors)
-            console.log(req.headers);
-           res.render('contactus.hbs', {layout: "mainHome.hbs"})
+           res.redirect('/contactus')
         }
         const userDatas = {
             FirstName: req.body.firstname,

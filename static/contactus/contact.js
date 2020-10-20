@@ -1,4 +1,4 @@
-
+document.addEventListener('contextmenu',(e) => e.preventDefault())
     const form = document.querySelectorAll('.input');
     
     form.forEach(ele => {
@@ -16,6 +16,7 @@ document.querySelector('.btn').addEventListener('click', (e) => {
     
     form.forEach(ele => {
         console.log(ele.id)
+        console.log
         if(ele.id.value === null || ele.value === "") {
             e.preventDefault()
             ele.classList.add('error')
