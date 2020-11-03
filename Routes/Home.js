@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const mongo = require('../config/DbConnection')
+const passport = require('passport')
+require('../config/checkpass')
 const {validationResult} = require('express-validator')
 const app = express.Router()
 const validateUser = require('../config/validate')
@@ -45,9 +47,10 @@ app.post('/contactus',[validateUser],(req, res) => {
     
 })
 
-app.post('/login', (req, res) => {
-    res.render('message', {leyout: "mainHome"})
-})
+app.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/contactus'
+}))
 app.get('/about', (req, res) => {
     console.log(req.body)
     res.render('about', {layout: "mainHome.hbs"})
@@ -55,6 +58,10 @@ app.get('/about', (req, res) => {
 
 app.get('/services', (req, res) => {
     res.render('services', {layout: 'mainHome'})
+})
+
+app.get('/messages', (req, res) => {
+    res.render('message', {layout: 'mainHome'})
 })
 
 module.exports = app;
