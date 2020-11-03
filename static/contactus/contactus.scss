@@ -54,16 +54,16 @@
     padding: 10px;
     border: 1px solid gray;
     line-height: 50px;
-    width: 60%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    -webkit-box-shadow: 10px 8px 28px -2px rgba(0,0,0,0.64);
-    -moz-box-shadow: 10px 8px 28px -2px rgba(0,0,0,0.64);
-    box-shadow: 10px 8px 28px -2px rgba(0,0,0,0.64);
+    // -webkit-box-shadow: 10px 8px 28px -2px rgba(0,0,0,0.64);
+    // -moz-box-shadow: 10px 8px 28px -2px rgba(0,0,0,0.64);
+    // box-shadow: 10px 8px 28px -2px rgba(0,0,0,0.64);
     border-top: 10px solid rgb(245, 141, 245);
 }
 .contact {
@@ -172,7 +172,7 @@
         width: 100%;
     }
     .contact-left{
-        width: 95%;
+        width: 100%;
     }
     .contact-form{
         width: 100%;

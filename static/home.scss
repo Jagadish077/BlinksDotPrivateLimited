@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {
     margin: 0%;
     padding: 0%;
@@ -21,6 +23,7 @@ body {
     background-color: #1F2833;
     color: #E3E2DF;
     border: 2px solid white;
+    font-family: 'Open Sans', sans-serif;
 }
 .home-head {
     top: 0%;
@@ -411,12 +414,12 @@ body {
        display: flex;
        flex-direction: column;
        justify-content: center;
-       width: 80%;
-       padding: 20px;
+       width: 90%;
+       padding: 10px;
        margin: 10px auto 10px auto;
        line-height: 30px;
        align-items: center;
-       border: .1px solid gray;
+
     }
     #login-line {
         border: 0.5px solid #FFFFFF;
