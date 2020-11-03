@@ -66,5 +66,38 @@
             </div>
         </div>
     </div>
+     <div class="login-main-form">
+        <div class="login-main-text">
+            <p class="login-intruct">Login Instruction</p>
+            <div class="list-instruct">
+                <ul>
+                   <li>By logging in You can send us an email</li>
+                   <li>You can also even send us messages through whats app</li>
+                   <ol>
+                       <li>Your Emain is your Username</li>
+                       <li>Your Phone Number is your Password</li>
+                   </ol>
+                </ul>
+            </div>
+        </div>
+        <div id="login-line"></div>
+        <div class="login-form" id="login-form">
+            <form action="/login" method="POST" class="login">
+                <div class="input-area">
+                    <label for="username">Username</label>
+                    <input type="text" class="input" id="input" placeholder="Enter the Username">
+                </div>
+                <div class="input-area">
+                    <label for="username">Password</label>
+                    <input type="password" class="input" id="input" placeholder="Enter the Password">
+                </div>
+                <div class="input-area">
+                    <input type="submit" class="btn" id="btn" value="Login">
+                    <p>click here to <a class="logreg" href="/contactus">Register</a></p> 
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
 </div>
 <script src="/static/MainHome.js"></script>

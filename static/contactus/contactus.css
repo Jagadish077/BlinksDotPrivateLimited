@@ -154,19 +154,101 @@
 }
 
 .btn {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: white;
+  border: black;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  -webkit-transition: all .10s linear;
+  transition: all .10s linear;
+  color: white;
+  background-color: transparent;
+  outline: white;
+}
+
+.error-message {
+  width: 100%;
   padding: 5px;
-  margin-top: 5px;
+  margin: 0 0 5px 0;
+  height: auto;
+  border-radius: 3px;
+  background-color: #dddddd;
+  color: #963636;
+  z-index: 60;
+  font-size: small;
+  font-weight: 50;
+  -webkit-transition: all 0.10s linear;
+  transition: all 0.10s linear;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.close {
+  color: #972222;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.10s linear;
+  transition: all 0.10s linear;
+}
+
+.req {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: white;
+  border: black;
+  color: black;
+}
+
+.req:hover {
+  color: white;
+  background-color: transparent;
+  border: 0.1px solid white;
 }
 
 @media only screen and (max-width: 768px) {
+  .contact-head {
+    border-bottom: 1px solid gray;
+    letter-spacing: 4px;
+    font-size: medium;
+    font-weight: 900;
+  }
   .contact-us-main {
-    width: 95%;
+    width: 100%;
   }
   .contact-form-main {
     width: 100%;
   }
   .contact-left {
-    width: auto;
+    width: 95%;
+  }
+  .contact-form {
+    width: 100%;
   }
   .contact-head {
     letter-spacing: 2px;
@@ -176,9 +258,6 @@
   }
   .contact-display {
     font-size: small;
-  }
-  .contact-form {
-    width: 100%;
   }
 }
 /*# sourceMappingURL=contactus.css.map */

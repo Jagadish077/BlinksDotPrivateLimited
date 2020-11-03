@@ -10,34 +10,51 @@ app.get('/', (req, res) => {
 })
 
 app.get('/contactus', (req, res) => {
-    res.render('contactus.hbs', {layout: "mainHome.hbs"})
-})
-app.post('/contactus',[validateUser], async(req, res) => {
-    const errors = validationResult(req);
-        if (!errors.isEmpty()){
-           res.redirect('/contactus')
+        // if(req.session.errors){
+        //     res.json(req.session.errors)
+        // }
+        let erors;
+        if(req.session.success){
+            JSON.parse(erors)
         }
-        const userDatas = {
-            FirstName: req.body.firstname,
-            LastName: req.body.lastname,
-            Email: req.body.email,
-            Phone: req.body.phone,
-            Change: req.body.change,
-            Message: req.body.message1
-        }
-        const data = new userModel(userDatas);
-        data.save((err, datas) => {
-            if(err) {
-                console.log(err);
-            }else{
-                res.redirect('/')
-            }
-        })
+        // const errorsModified = JSON.stringify(parsed)
+        const datas = JSON.stringify(erors)
+       res.render('contactus', {errors: datas})
     
+})
+app.post('/contactus',[validateUser],(req, res) => {
+    const userDatas = {
+        FirstName: req.body.firstname,
+        LastName: req.body.lastname,
+        Email: req.body.email,
+        Phone: req.body.phone,
+        Change: req.body.change,
+        Message: req.body.message1
+    }
+    const data = new userModel(userDatas);
+    data.save((err, datas) => {
+        if(err) {
+            console.log(err);
+        }else{
+            req.session.success = true;
+            req.session.errors = false
+            res.redirect('/')
+        }
+    })
+        
+    
+})
+
+app.post('/login', (req, res) => {
+    res.render('message', {leyout: "mainHome"})
 })
 app.get('/about', (req, res) => {
     console.log(req.body)
     res.render('about', {layout: "mainHome.hbs"})
+})
+
+app.get('/services', (req, res) => {
+    res.render('services', {layout: 'mainHome'})
 })
 
 module.exports = app;

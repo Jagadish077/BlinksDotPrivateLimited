@@ -8,6 +8,15 @@ a {
     color: rgb(29, 29, 29);
 }
 
+.logerr{
+    border: 1px solid red;
+    outline: red;
+    padding: 10px;
+    -webkit-box-shadow: -1px 1px 19px -2px rgb(143, 60, 60);
+    -moz-box-shadow: -1px 1px 19px -2px rgb(150, 74, 74);
+    box-shadow: -1px 1px 19px -2px rgb(184, 85, 85);
+}
+
 body {
     background-color: #1F2833;
     color: #E3E2DF;
@@ -61,6 +70,7 @@ body {
    background-color: whitesmoke;
    color: black;
    cursor: pointer;
+   transition: all .10s linear;
 }
 
 //body text
@@ -106,13 +116,8 @@ body {
     border: 0.5px solid gray;
     height: 100%;
     width: .1px;
+    margin: 5px;
 }
-// .vission {
-//     text-align: justify;
-// }
-// .mission {
-//     text-align: justify;
-// }
 
 .services {
     display: flex;
@@ -164,15 +169,97 @@ body {
     border-radius: 5px;
     text-align: center;
     color: white;
+    transition: all .10s linear;
 }
 .nav a:hover {
     padding: 8px;
     background-color: rgb(241, 241, 241);
     color: black;
+    
+}
+
+.login-main-form {
+    height: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 30px;
+    list-style-type:none ;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+}
+.login-main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.login-form {
+    color: black;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: -1px -2px 14px 0px rgba(0,0,0,0.5);
+    
+}
+.login {
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}
+.input {
+    width: 100%;
+    align-items: center;
+}
+#login-line {
+    border: 0.1px solid #FFFFFF;
+    height: 300px;
+    width: 0.1px;
+}
+.login-intruct {
+    border-bottom: 1px solid whitesmoke;
+}
+#btn {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #1a1f27;
+    color: whitesmoke;
+    
+}
+#btn:hover {
+    transition: all .10s linear;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: black;
+    
+}
+.logreg {
+    border: 1px solid black;
+    padding: 10px;
+    background-color:#1a1f27;
+    color: white;
+    border-radius: 5px;
+}
+
+.logreg:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 //footer
 .home-main-footer {
-    color: rgb(55, 55, 61);
+    color: rgb(126, 126, 128);
     width: 100%;
     height: auto;
     background-color: rgb(10, 19, 26);
@@ -209,19 +296,21 @@ body {
     text-align: center;
     align-items: center;
     margin: 5px;
-    padding: 5px;
+    // padding: 5px 8px 5px 8px;
     background-color: rgba(34, 34, 34, 0.925);
     border-radius: 4px;
   
 }
 .social-icons-items:hover {
     border: black;
-    background-color: rgb(255, 255, 255);
 }
 .social-icons-items a {
+    padding: 5px 8px 5px 8px;
     color: white;
 }
 .social-icons-items a:hover{
+    background-color: whitesmoke;
+    transition: all .10s linear;
     color: black;
 }
 .copy-rights {
@@ -272,6 +361,14 @@ body {
     .bars i {
         color: black;
     }
+    .comp-name-p {
+        font-size: medium;
+        font-weight: 900;
+        letter-spacing: 3px;
+    }
+    .slogan {
+        font-size: small;
+    }
     .mission-vission {
         width: 90%;
         margin: auto;
@@ -303,5 +400,35 @@ body {
     }
     .services-card {
         width: 250px;
+    }
+    .copy-rights {
+        font-size: small;
+    }
+    .comp-details{
+        font-size: small;
+    }
+    .login-main-form {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       width: 80%;
+       padding: 20px;
+       margin: 10px auto 10px auto;
+       line-height: 30px;
+       align-items: center;
+       border: .1px solid gray;
+    }
+    #login-line {
+        border: 0.5px solid #FFFFFF;
+        height: 1px;
+        width: 100%;
+        margin: 10px 5px 10px 5px;
+    }
+    .login-main-text {
+        width: 80%;
+    }
+    .login-form {
+        width: 100%;
+        margin: 5px auto 5px auto;
     }
 }

@@ -1,5 +1,5 @@
 <div class="dummy-div">
-    {{#if result}}
-        <p>result</p>
-    {{/if}}
+    {{#each errors}}
+                    <li>{{this.msg}}</li>
+                {{/each}}
 </div>

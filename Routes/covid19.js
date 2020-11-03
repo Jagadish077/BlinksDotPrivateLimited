@@ -42,6 +42,7 @@ app.get('/CovidDataTracker', async(req, response) => {
     });
     response.render('covidData.hbs',
         { 
+        layout: 'main',
          active_cases: modifiedData[0].active,
          confirmed: modifiedData[0].confirmed ,
          deaths: modifiedData[0].deaths,

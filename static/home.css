@@ -10,6 +10,14 @@ a {
   color: #1d1d1d;
 }
 
+.logerr {
+  border: 1px solid red;
+  outline: red;
+  padding: 10px;
+  -webkit-box-shadow: -1px 1px 19px -2px #8f3c3c;
+  box-shadow: -1px 1px 19px -2px #b85555;
+}
+
 body {
   background-color: #1F2833;
   color: #E3E2DF;
@@ -79,6 +87,8 @@ body {
   background-color: whitesmoke;
   color: black;
   cursor: pointer;
+  -webkit-transition: all .10s linear;
+  transition: all .10s linear;
 }
 
 .comp-name-p {
@@ -144,6 +154,7 @@ body {
   border: 0.5px solid gray;
   height: 100%;
   width: .1px;
+  margin: 5px;
 }
 
 .services {
@@ -235,6 +246,8 @@ body {
   border-radius: 5px;
   text-align: center;
   color: white;
+  -webkit-transition: all .10s linear;
+  transition: all .10s linear;
 }
 
 .nav a:hover {
@@ -243,8 +256,121 @@ body {
   color: black;
 }
 
+.login-main-form {
+  height: auto;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 30px;
+  list-style-type: none;
+  margin: 10px auto 10px auto;
+  padding: 20px;
+}
+
+.login-main-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+}
+
+.login-form {
+  color: black;
+  padding: 10px;
+  border: 1px solid whitesmoke;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: -1px -2px 14px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -1px -2px 14px 0px rgba(0, 0, 0, 0.5);
+}
+
+.login {
+  height: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#login-line {
+  border: 0.1px solid #FFFFFF;
+  height: 300px;
+  width: 0.1px;
+}
+
+.login-intruct {
+  border-bottom: 1px solid whitesmoke;
+}
+
+#btn {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #1a1f27;
+  color: whitesmoke;
+}
+
+#btn:hover {
+  -webkit-transition: all .10s linear;
+  transition: all .10s linear;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.logreg {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #1a1f27;
+  color: white;
+  border-radius: 5px;
+}
+
+.logreg:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
 .home-main-footer {
-  color: #37373d;
+  color: #7e7e80;
   width: 100%;
   height: auto;
   background-color: #0a131a;
@@ -303,21 +429,23 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 5px;
-  padding: 5px;
   background-color: rgba(34, 34, 34, 0.925);
   border-radius: 4px;
 }
 
 .social-icons-items:hover {
   border: black;
-  background-color: white;
 }
 
 .social-icons-items a {
+  padding: 5px 8px 5px 8px;
   color: white;
 }
 
 .social-icons-items a:hover {
+  background-color: whitesmoke;
+  -webkit-transition: all .10s linear;
+  transition: all .10s linear;
   color: black;
 }
 
@@ -383,6 +511,14 @@ body {
   .bars i {
     color: black;
   }
+  .comp-name-p {
+    font-size: medium;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  .slogan {
+    font-size: small;
+  }
   .mission-vission {
     width: 90%;
     margin: auto;
@@ -431,6 +567,45 @@ body {
   }
   .services-card {
     width: 250px;
+  }
+  .copy-rights {
+    font-size: small;
+  }
+  .comp-details {
+    font-size: small;
+  }
+  .login-main-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+    padding: 20px;
+    margin: 10px auto 10px auto;
+    line-height: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: .1px solid gray;
+  }
+  #login-line {
+    border: 0.5px solid #FFFFFF;
+    height: 1px;
+    width: 100%;
+    margin: 10px 5px 10px 5px;
+  }
+  .login-main-text {
+    width: 80%;
+  }
+  .login-form {
+    width: 100%;
+    margin: 5px auto 5px auto;
   }
 }
 /*# sourceMappingURL=home.css.map */

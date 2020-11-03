@@ -31,7 +31,7 @@ app.set('view engine', 'hbs');
 app.engine('hbs', hbs({
     layoutsDir: __dirname + '/views/layouts',
     extname: 'hbs',
-    defaultLayout: 'main'
+    defaultLayout: 'mainHome'
 }));
 
 app.use('/static', express.static('static'))
