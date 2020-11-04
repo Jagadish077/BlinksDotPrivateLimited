@@ -48,14 +48,18 @@ document.querySelector('.btn').addEventListener('click', (e) => {
     }
 
 })
-const mess = document.querySelector('.error-message')
-document.querySelector('.close').addEventListener('click', (e) => {
-    e.preventDefault()
-    mess.style.display = 'none'
-   
-})
+const mess = document.querySelectorAll('.error-message')
+var counter = 0;
+const closebtn = document.querySelector('.close')
+  
+    mess.forEach(element => {
+        closebtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            element.style.display = 'none'
+        })
+    });
 
-setTimeout(() => {
-    mess.style.display = 'none';
+// setTimeout(() => {
+//     mess.style.display = 'none';
 
-}, 4000)
+// }, 10000)

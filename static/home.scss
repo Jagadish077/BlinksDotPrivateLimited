@@ -18,7 +18,10 @@ a {
     -moz-box-shadow: -1px 1px 19px -2px rgb(150, 74, 74);
     box-shadow: -1px 1px 19px -2px rgb(184, 85, 85);
 }
-
+.log-err {
+    padding: 10px;
+    border: 1px solid red;
+}
 body {
     background-color: #1F2833;
     color: #E3E2DF;
@@ -262,7 +265,7 @@ body {
 }
 //footer
 .home-main-footer {
-    color: rgb(126, 126, 128);
+    color: rgb(255, 255, 255);
     width: 100%;
     height: auto;
     background-color: rgb(10, 19, 26);

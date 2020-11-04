@@ -9,13 +9,19 @@
                 
                
             </div>
-            <div class="contact-form">
+            <div class="contact-form" id="contact">
                 {{#each errors}}
                    <div class="error-message">
                         <p class="err-text">{{this.msg}}</p>
                         <a class="close"><i class="far fa-window-close fa-1.5x"></i></a>
                     </div>
                 {{/each}}
+                {{#if userError}}
+                    <p>{{userError}}</p>
+                {{/if}}
+                {{#if email}}
+                    <p>{{email}}</p>
+                {{/if}}
                 
                 <form action="/contactus" method="POST" class="contact">
                     <div class="input-area">

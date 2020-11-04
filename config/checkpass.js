@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
 
 const model = new mongoose.model('User', database)
 passport.use(
-    new localStrategy(
-        (username, password, done) => {
+    new localStrategy({passReqToCallback: true},
+        (req, username, password, done) => {
             model.findOne({ 'Email': username, 'Phone': password }, async(err, result) => {
                 if (err) {
                     console.log(err);
@@ -14,7 +14,7 @@ passport.use(
                 }
                 if (!result) {
                     console.log("User Not Found")
-                    return done(null, false);
+                    return done(null, false, req.flash('error', "User Not Found...!"));
                 } else {
                     return done(null, result)
                 }

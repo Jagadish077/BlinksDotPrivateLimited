@@ -9,6 +9,7 @@ const session = require('express-session')
 const passport = require('passport')
 const UserSchema = require('./config/DbConnection')
 const User = mongoose.model('User', UserSchema)
+const flash = require('connect-flash')
 const app = express()
 
 
@@ -60,7 +61,7 @@ var https_options = {
     p7b: fs.readFileSync("./sll/www_blinksdot_com.p7b")
    };
 
-
+app.use(flash())
 app.use(`/`, covidData)
 app.use(`/`, Home)
 
